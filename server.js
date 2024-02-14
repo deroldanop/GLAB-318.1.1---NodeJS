@@ -1,8 +1,9 @@
 // Importing required modules
 const http = require('http');
+const hostname = '127.0.0.1'
 
 // Define the port number
-const PORT = 8080;
+const port = 8080;
 
 // Creating a server
 const server = http.createServer((req, res) => {
@@ -25,7 +26,9 @@ res.write("We have test here")
 
 
 // Start the server
-server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+server.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 
 });
+
+server.listen(port, hostname, () => {  console.log(`Server running at http://${hostname}:${port}/`);});
