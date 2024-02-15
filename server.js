@@ -20,7 +20,7 @@ res.write("We have test here")
     res.write("Error: server cannot find the requested resource")
 }
   // Sending a response
-  res.end('Chao');
+  res.end(' Chao');s
 });
 
 
